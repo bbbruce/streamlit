@@ -507,6 +507,7 @@ const NumberInput: React.FC<Props> = ({
               data-testid="stNumberInputStepDown"
               onClick={decrement}
               disabled={!canDec || disabled}
+              aria-label="Step down"
               tabIndex={-1}
             >
               <Icon
@@ -519,6 +520,7 @@ const NumberInput: React.FC<Props> = ({
               data-testid="stNumberInputStepUp"
               onClick={increment}
               disabled={!canInc || disabled}
+              aria-label="Step up"
               tabIndex={-1}
             >
               <Icon
