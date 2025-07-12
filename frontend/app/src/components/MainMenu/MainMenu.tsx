@@ -495,7 +495,10 @@ function MainMenu(props: Readonly<Props>): ReactElement {
         className="stMainMenu"
         data-testid="stMainMenu"
       >
-        <BaseButton kind={BaseButtonKind.HEADER_NO_PADDING}>
+        <BaseButton
+          kind={BaseButtonKind.HEADER_NO_PADDING}
+          aria-label="Open menu"
+        >
           <Icon content={MoreVert} size="lg" />
         </BaseButton>
         {props.screenCastState === "RECORDING" && <StyledRecordingIndicator />}
