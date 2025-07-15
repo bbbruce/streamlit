@@ -87,7 +87,10 @@ import {
 } from "./hooks"
 import ColumnMenu from "./menus/ColumnMenu"
 import ColumnVisibilityMenu from "./menus/ColumnVisibilityMenu"
-import { StyledResizableContainer } from "./styled-components"
+import {
+  StyledDownloadContainer,
+  StyledResizableContainer,
+} from "./styled-components"
 import Tooltip from "./Tooltip"
 
 import "@glideapps/glide-data-grid/dist/index.css"
@@ -1343,6 +1346,19 @@ function DataFrame({
           // The portal element is expected to always exist (-> PortalProvider).
           document.querySelector("#portal") as HTMLElement
         )}
+      <StyledDownloadContainer>
+        <a
+          href="#"
+          download
+          role="button"
+          onClick={e => {
+            e.preventDefault()
+            exportToCsv()
+          }}
+        >
+          Download data (CSV)
+        </a>
+      </StyledDownloadContainer>
     </StyledResizableContainer>
   )
 }
