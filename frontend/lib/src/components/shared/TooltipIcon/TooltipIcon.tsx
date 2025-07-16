@@ -72,7 +72,7 @@ function TooltipIcon({
       >
         {children || (
           <HelpCircleIcon
-            aria-role="img"
+            role="img"
             aria-label="More info"
             className="icon"
             /* Convert size to px because using rem works but logs a console error (at least on webkit) */
